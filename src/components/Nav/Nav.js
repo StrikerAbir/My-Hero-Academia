@@ -11,7 +11,7 @@ const Nav = () => {
     { id: 4, name: "Blog", path: "/blog" },
   ];
   return (
-    <div className="bg-yellow-400 text-black lg:flex items-center justify-around py-3 shadow-lg">
+    <div className="bg-yellow-400 text-black lg:flex items-center justify-around py-3 shadow-lg sticky top-0">
       <div className="flex items-center justify-between mx-8">
         <img className="lg:w-48 w-36" src={logo} alt="" />
         <div onClick={() => setOpen(!open)} className="h-8 w-8 lg:hidden ">
