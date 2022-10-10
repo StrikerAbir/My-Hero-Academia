@@ -4,10 +4,15 @@ import { NavLink } from 'react-router-dom';
 const Links = ({ route }) => {
     const { path, name } = route;
     const activeStyle = {
-      textDecoration: "underline",
+      border: "2px solid black",
+      borderRadius: "8px",
+      padding: "10px 20px",
+        backgroundColor: "#e92b19",
+      color:'white',
+    
     };
     return (
-      <div className="pl-8 text-lg font-bold">
+      <div className="md:pl-8 font-bold my-7">
         <NavLink
           to={path}
           style={({ isActive }) => (isActive ? activeStyle : undefined)}

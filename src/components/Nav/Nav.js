@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Links from "./Links/Links";
 import logo from "../../images/logo.png";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const Nav = () => {
+    const [open, setOpen] = useState(false);
   const routes = [
     { id: 1, name: "Quiz Topics", path: "/" },
     { id: 2, name: "Departments", path: "/departments" },
@@ -10,11 +12,18 @@ const Nav = () => {
   ];
   return (
     <div className="bg-yellow-400 text-black md:flex items-center justify-around py-3 shadow-lg">
-      <div>
-        <img className='w-48' src={logo} alt="" />
+      <div className="flex items-center justify-between mx-8">
+        <img className="md:w-48 w-36" src={logo} alt="" />
+        <div onClick={() => setOpen(!open)} className="h-8 w-8 md:hidden ">
+          {open ? <XMarkIcon /> : <Bars3Icon />}
+        </div>
       </div>
       <nav>
-        <ul className='md:flex'>
+        <ul
+          className={`pt-5 md:pt-0 md:flex md:static absolute left-0 right-0 mx-auto bg-yellow-400 shadow-xl md:shadow-none ${
+            open ? "top-22" : "top-[-500px]"
+          }`}
+        >
           {routes.map((route) => (
             <Links key={route.id} route={route}></Links>
           ))}
