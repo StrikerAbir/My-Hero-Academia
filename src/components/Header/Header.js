@@ -22,10 +22,10 @@ const Header = () => {
               at technology. Everyone have different power. That makes us a
               Hero. My Hero Academia is place where you can improve your ability
               in greater way. Not every thing, but this is educational academy,
-              so you can improve your skills on{" "}
+              so you can improve your skills on
               <span className="font-bold">
                 CSE, EEE, Civil, Mechanical, Bio-Technology and, Animation
-              </span>{" "}
+              </span>
               departments. Never forget every one is a hero.
             </p>
           </div>
