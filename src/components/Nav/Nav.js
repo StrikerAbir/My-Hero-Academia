@@ -11,16 +11,16 @@ const Nav = () => {
     { id: 4, name: "Blog", path: "/blog" },
   ];
   return (
-    <div className="bg-yellow-400 text-black md:flex items-center justify-around py-3 shadow-lg">
+    <div className="bg-yellow-400 text-black lg:flex items-center justify-around py-3 shadow-lg">
       <div className="flex items-center justify-between mx-8">
-        <img className="md:w-48 w-36" src={logo} alt="" />
-        <div onClick={() => setOpen(!open)} className="h-8 w-8 md:hidden ">
+        <img className="lg:w-48 w-36" src={logo} alt="" />
+        <div onClick={() => setOpen(!open)} className="h-8 w-8 lg:hidden ">
           {open ? <XMarkIcon /> : <Bars3Icon />}
         </div>
       </div>
       <nav>
         <ul
-          className={`pt-5 md:pt-0 md:flex md:static absolute left-0 right-0 mx-auto bg-yellow-400 shadow-xl md:shadow-none ${
+          className={`pt-5 lg:pt-0 lg:flex lg:static absolute left-0 right-0 mx-auto bg-yellow-400 shadow-xl lg:shadow-none ${
             open ? "top-22" : "top-[-500px]"
           }`}
         >

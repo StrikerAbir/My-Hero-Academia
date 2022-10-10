@@ -5,7 +5,7 @@ import Nav from '../components/Nav/Nav';
 
 const Main = () => {
     return (
-        <div className="bg-yellow-300 h-96">
+        <div className="bg-yellow-300">
             <Nav></Nav>
             <Header></Header>
             <Outlet></Outlet>

@@ -1,5 +1,3 @@
-import mainPic from './images/myheroaca.png';
-import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
 import Topics from './components/Topics/Topics';
@@ -11,10 +9,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Main></Main>,
+      element: 
+          <Main ></Main>,
       children: [
         {
-          path: '/',
+          path: '/topics',
           element: <Topics></Topics>
         },
         { 
