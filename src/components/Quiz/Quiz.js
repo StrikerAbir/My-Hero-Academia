@@ -14,7 +14,7 @@ const Quiz = () => {
           </h1>
             </div>
             <div className="flex justify-center">
-                <div>
+                <div className="w-4/6">
 
                 {
                     questions.map(question=><Question key={Math.random()} singleQuestion={question}></Question>)
