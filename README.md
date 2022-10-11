@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +67,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+## About My Hero Academia site.
+1. An academic site
+2. Using react js, Rechart, tailwind CSS, React router DOM, HeroIcons in this project.
+3. It have a nav bar that have 4 options. (Quiz Topics, Departments, ReChart, Blog).
+4. There are 4 quiz topics and every one of them have some question to answer.
+5. clicking option in questions will give you toast about your answer.
+6. A dashboard to see how many correct and how many wrong.
+7. Departments route will show you info about departments we have.
+8. There are some blog.
+9. and rechart shows how many questions one topic have and department cost.
