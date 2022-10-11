@@ -1,12 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const Question = ({ singleQuestion }) => {
-    const { options, id, question, correctAnswer } = singleQuestion;
-    return (
-        <div className='w-4/5 border '>
-            dsfsdf
-        </div>
-    );
+  const { options, id, question, correctAnswer } = singleQuestion;
+  console.log(question);
+//   const
+  return (
+    <div className="w-4/5 border ">
+      <img
+        src="https://media.giphy.com/headers/myheroacademia/KTZdxBWpG829.gif"
+        alt=""
+      />
+      <img
+        src="https://media.giphy.com/avatars/myheroacademia/KLsed562kWfD/200h.gif"
+        alt=""
+      />
+    </div>
+  );
 };
 
 export default Question;
