@@ -18,6 +18,7 @@ function App() {
             return fetch("https://openapi.programming-hero.com/api/quiz");
           },
           element: <Topics></Topics>,
+          errorElement: <NotFound></NotFound>,
         },
         {
           path: "/departments",
@@ -36,6 +37,7 @@ function App() {
             return fetch("https://openapi.programming-hero.com/api/quiz");
           },
           element: <ReChart></ReChart>,
+          errorElement: <NotFound></NotFound>,
         },
       ],
     },

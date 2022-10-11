@@ -13,7 +13,7 @@ const ReChart = () => {
             ReChart
           </h1>
         </div>
-        <div className="mx-10 flex lg:flex-row flex-col justify-around items-center">
+        <div className="mx-10 flex lg:flex-row flex-col justify-evenly items-center">
           <div>
             <h2 className=" font-bold text-2xl mb-5">
               Quiz Question Chart
