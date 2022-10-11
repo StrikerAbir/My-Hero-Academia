@@ -5,6 +5,7 @@ import Departments from './components/Departments/Departments';
 import Blog from './components/Blog/Blog';
 import ReChart from './components/ReChart/ReChart';
 import NotFound from './components/NotFound/NotFound';
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,13 +21,7 @@ function App() {
           element: <Topics></Topics>,
           errorElement: <NotFound></NotFound>,
         },
-        {
-          path: "/departments",
-          loader: () => {
-            return fetch("department.json");
-          },
-          element: <Departments></Departments>,
-        },
+
         {
           path: "/blog",
           element: <Blog></Blog>,
@@ -39,8 +34,20 @@ function App() {
           element: <ReChart></ReChart>,
           errorElement: <NotFound></NotFound>,
         },
+        {
+          path: "/topics/quiz",
+          element: <Quiz></Quiz>,
+        },
+        {
+          path: "/departments",
+          loader: () => {
+            return fetch("department.json");
+          },
+          element: <Departments></Departments>,
+        },
       ],
     },
+
     {
       path: "*",
       element: <NotFound></NotFound>,

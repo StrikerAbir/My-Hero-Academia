@@ -7,7 +7,6 @@ const Main = () => {
     return (
         <div className="bg-yellow-300">
             <Nav></Nav>
-            <Header></Header>
             <Outlet></Outlet>
         </div>
     );

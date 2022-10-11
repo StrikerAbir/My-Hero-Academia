@@ -4,7 +4,8 @@ import Department from './Department/Department';
 
 const Departments = () => {
   const depts = useLoaderData();
-  // console.log(depts);
+  console.log(depts);
+  
     return (
       <div className="pb-24">
         <div className="flex justify-center py-10">
