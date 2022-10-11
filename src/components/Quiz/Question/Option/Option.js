@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import './Option.css'
 import { ToastContainer, toast } from "react-toastify";
 import { DashContext } from '../../Quiz';
 
@@ -24,7 +23,7 @@ const Option = ({ option, id, correctAnswer }) => {
         <label
           for={option}
           className="flex p-5"
-          onClick={() => showToastMessage(correctAnswer,option)}
+          onClick={() => showToastMessage(correctAnswer, option)}
         >
           <input type="radio" id={option} name={id} />
           <div className="w-full h-full">
