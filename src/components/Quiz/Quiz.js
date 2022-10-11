@@ -9,17 +9,17 @@ const Quiz = () => {
   const { id, name, questions } = questionData.data;
   // console.log(questions);
   // tost message
-  const showToastMessage = (correctAnswer, option) => {
-    if (correctAnswer === option) {
-      return toast.success("Correct Answer!", {
-        position: toast.POSITION.TOP_CENTER,
-      });
-    } else {
-      return toast.error("Wrong Answer!", {
-        position: toast.POSITION.TOP_CENTER,
-      });
-    }
-  };
+//   const showToastMessage = (correctAnswer, option) => {
+//     if (correctAnswer === option) {
+//       return toast.success("Correct Answer!", {
+//         position: toast.POSITION.TOP_CENTER,
+//       });
+//     } else {
+//       return toast.error("Wrong Answer!", {
+//         position: toast.POSITION.TOP_CENTER,
+//       });
+//     }
+//   };
   return (
     <div>
       <div className="flex justify-center py-10">
@@ -34,7 +34,6 @@ const Quiz = () => {
               key={Math.random()}
               index={index}
               singleQuestion={question}
-              showToastMessage={showToastMessage}
             ></Question>
           ))}
         </div>

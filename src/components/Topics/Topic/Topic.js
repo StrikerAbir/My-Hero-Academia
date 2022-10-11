@@ -22,6 +22,7 @@ const Topic = ({ topic }) => {
           </button>
         </div>
         </Link>
+        
       </div>
     );
 };
