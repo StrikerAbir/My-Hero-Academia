@@ -3,7 +3,7 @@ import Main from './layout/Main';
 import Topics from './components/Topics/Topics';
 import Departments from './components/Departments/Departments';
 import Blog from './components/Blog/Blog';
-import About from './components/About/About';
+import ReChart from './components/ReChart/ReChart';
 import NotFound from './components/NotFound/NotFound';
 
 function App() {
@@ -13,7 +13,10 @@ function App() {
       element: <Main></Main>,
       children: [
         {
-          path: "/topics",
+          path: "/",
+          loader: () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
           element: <Topics></Topics>,
         },
         {
@@ -25,8 +28,8 @@ function App() {
           element: <Blog></Blog>,
         },
         {
-          path: "/about",
-          element: <About></About>,
+          path: "/chart",
+          element: <ReChart></ReChart>,
         },
       ],
     },

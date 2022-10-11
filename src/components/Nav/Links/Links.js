@@ -4,11 +4,13 @@ import { NavLink } from "react-router-dom";
 const Links = ({ route }) => {
   const { path, name } = route;
   const activeStyle = {
-    border: "2px solid black",
+    borderTop: "1px solid #e92b19",
+    borderLeft: "4px solid #e92b19",
+    borderRight: "4px solid #e92b19",
     borderRadius: "8px",
     padding: "10px 20px",
-    backgroundColor: "#e92b19",
-    color: "white",
+    boxShadow: "0px 4px 3px #ddc43e",
+    color: "gray",
   };
   return (
     <div className="lg:pl-8 font-bold my-7 flex lg:block justify-center">

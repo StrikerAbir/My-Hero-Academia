@@ -25,8 +25,7 @@ const Header = () => {
               so you can improve your skills on
               <span className="font-bold">
                 CSE, EEE, Civil, Mechanical, Bio-Technology and, Animation
-              </span>
-              departments. Never forget every one is a hero.
+              </span> departments. Never forget every one is a hero.
             </p>
           </div>
         </div>

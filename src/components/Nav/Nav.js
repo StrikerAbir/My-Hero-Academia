@@ -7,7 +7,7 @@ const Nav = () => {
   const routes = [
     { id: 1, name: "Quiz Topics", path: "/" },
     { id: 2, name: "Departments", path: "/departments" },
-    { id: 3, name: "About", path: "/about" },
+    { id: 3, name: "ReChart", path: "/chart" },
     { id: 4, name: "Blog", path: "/blog" },
   ];
   return (
