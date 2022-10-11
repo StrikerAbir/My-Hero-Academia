@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Option.css'
 import { ToastContainer, toast } from "react-toastify";
-const Option = ({ option, id,correctAnswer}) => {
+import { DashContext } from '../../Quiz';
+
+const Option = ({ option, id, correctAnswer }) => {
+    const [correct, setCorrect, wrong, setWrong] = useContext(DashContext);
     // console.log(id);
     const showToastMessage = (correctAnswer, option) => {
-      if (correctAnswer === option) {
+        if (correctAnswer === option) {
+            setCorrect(correct + 1);
         return toast.success("Correct Answer!", {
           position: toast.POSITION.TOP_CENTER,
         });
-      } else {
+        } else {
+            setWrong(wrong + 1);
         return toast.error("Wrong Answer!", {
           position: toast.POSITION.TOP_CENTER,
         });
