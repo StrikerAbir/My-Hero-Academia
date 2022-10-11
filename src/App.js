@@ -21,6 +21,9 @@ function App() {
         },
         {
           path: "/departments",
+          loader: () => {
+            return fetch("department.json");
+          },
           element: <Departments></Departments>,
         },
         {
