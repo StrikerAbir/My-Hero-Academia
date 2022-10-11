@@ -1,8 +1,10 @@
 import React from "react";
 import Option from "./Option/Option";
+import { EyeIcon } from "@heroicons/react/24/solid";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-
-const Question = ({ singleQuestion,index,showToastMessage }) => {
+const Question = ({ singleQuestion, index, showToastMessage }) => {
   const { options, id, question, correctAnswer } = singleQuestion;
     console.log(id);
     let splits=question;
@@ -31,12 +33,20 @@ const Question = ({ singleQuestion,index,showToastMessage }) => {
           );
         }
     }
-    
+   
+    const showAns = (correctAnswer) => {
+        toast.success(`Ans: ${correctAnswer}`, {
+          position: toast.POSITION.TOP_CENTER,
+        });
+    };
    
   return (
     <div className="bg-yellow-400 p-5 mb-8 shadow-lg rounded-xl border-x-4 border-t-2 border-[#e92b19]">
-      <div className="font-semibold text-2xl mb-5">
+      <div className="font-semibold text-2xl mb-5 flex items-center justify-between">
         Qus-{index + 1} : {`${splits}`}
+        <button className="ml-9" onClick={() =>showAns(correctAnswer)}>
+          <EyeIcon className="h-6 w-6" />
+        </button>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {options.map((option) => (
@@ -45,10 +55,11 @@ const Question = ({ singleQuestion,index,showToastMessage }) => {
             id={id}
             option={option}
             showToastMessage={showToastMessage}
+            correctAnswer={correctAnswer}
           ></Option>
         ))}
       </div>
-      
+      <ToastContainer />
     </div>
   );
 };

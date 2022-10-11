@@ -1,19 +1,24 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import Question from './Question/Question';
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import Question from "./Question/Question";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 const Quiz = () => {
   const questionData = useLoaderData();
   const { id, name, questions } = questionData.data;
   // console.log(questions);
   // tost message
-  const showToastMessage = (id) => {
-    toast.success("Success Notification !", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
+  const showToastMessage = (correctAnswer, option) => {
+    if (correctAnswer === option) {
+      return toast.success("Correct Answer!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      return toast.error("Wrong Answer!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
   };
   return (
     <div>
@@ -28,8 +33,8 @@ const Quiz = () => {
             <Question
               key={Math.random()}
               index={index}
-                  singleQuestion={question}
-                  showToastMessage={showToastMessage}
+              singleQuestion={question}
+              showToastMessage={showToastMessage}
             ></Question>
           ))}
         </div>
