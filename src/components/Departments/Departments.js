@@ -1,10 +1,14 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Department from './Department/Department';
 
 const Departments = () => {
-  const depts = useLoaderData();
-  console.log(depts);
+  const [depts, setDepts] = useState([]);
+
+  useEffect(() => {
+    fetch("department.json")
+      .then((res) => res.json())
+      .then((data) => setDepts(data));
+  }, []);
   
     return (
       <div className="pb-24">

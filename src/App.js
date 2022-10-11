@@ -21,7 +21,10 @@ function App() {
           element: <Topics></Topics>,
           errorElement: <NotFound></NotFound>,
         },
-
+        {
+          path: "/departments",
+          element: <Departments></Departments>,
+        },
         {
           path: "/blog",
           element: <Blog></Blog>,
@@ -35,15 +38,11 @@ function App() {
           errorElement: <NotFound></NotFound>,
         },
         {
-          path: "/topics/quiz",
-          element: <Quiz></Quiz>,
-        },
-        {
-          path: "/departments",
-          loader: () => {
-            return fetch("department.json");
+          path: "/topics/quiz/:id",
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`);
           },
-          element: <Departments></Departments>,
+          element: <Quiz></Quiz>,
         },
       ],
     },

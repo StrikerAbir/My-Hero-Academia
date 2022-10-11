@@ -18,7 +18,7 @@ const ReChart = () => {
         <div className="mx-10 flex lg:flex-row flex-col justify-evenly items-center">
           <div>
             <h2 className=" font-bold text-2xl mb-5">Quiz Question Chart</h2>
-            <BarCharts key={"1"} topics={topics.data}></BarCharts>
+            <BarCharts topics={topics.data}></BarCharts>
           </div>
           <div>
             <h2 className="text-center font-bold text-2xl mb-5">

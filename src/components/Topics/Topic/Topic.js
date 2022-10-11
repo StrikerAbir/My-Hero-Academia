@@ -14,7 +14,7 @@ const Topic = ({ topic }) => {
           <h3 className="font-bold text-xl">{name}</h3>
           <p>Total Qus: {total}</p>
         </div>
-        <Link to="/topics/quiz">
+        <Link to={`/topics/quiz/${id}`}>
 
         <div className="flex justify-center">
           <button className="w-3/4 bg-[#e92b19] rounded-lg my-4 hover:bg-yellow-400 hover:border-x-4 hover:border-t-2 hover:border-[#e92b19] hover:shadow-lg">
