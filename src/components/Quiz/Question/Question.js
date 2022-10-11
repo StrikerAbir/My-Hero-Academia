@@ -1,7 +1,8 @@
 import React from "react";
 import Option from "./Option/Option";
 
-const Question = ({ singleQuestion }) => {
+
+const Question = ({ singleQuestion,index,showToastMessage }) => {
   const { options, id, question, correctAnswer } = singleQuestion;
     console.log(id);
     let splits=question;
@@ -31,14 +32,23 @@ const Question = ({ singleQuestion }) => {
         }
     }
     
+   
   return (
     <div className="bg-yellow-400 p-5 mb-8 shadow-lg rounded-xl border-x-4 border-t-2 border-[#e92b19]">
-      <div className="font-semibold text-2xl mb-5">{`${splits}`}</div>
+      <div className="font-semibold text-2xl mb-5">
+        Qus-{index + 1} : {`${splits}`}
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {options.map((option) => (
-          <Option key={Math.random()} id={id} option={option}></Option>
+          <Option
+            key={Math.random()}
+            id={id}
+            option={option}
+            showToastMessage={showToastMessage}
+          ></Option>
         ))}
       </div>
+      
     </div>
   );
 };

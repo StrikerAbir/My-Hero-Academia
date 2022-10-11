@@ -4,6 +4,7 @@ const Header = () => {
   return (
     <header className="mx-auto">
       <div className="lg:flex items-center my-10">
+       
         <div className="lg:w-1/2 p-10 flex justify-center">
           <img
             className="rounded-3xl shadow-lg"
@@ -25,7 +26,7 @@ const Header = () => {
               so you can improve your skills on
               <span className="font-bold">
                 CSE, EEE, Civil, Mechanical, Bio-Technology and, Animation
-              </span>{" "}
+              </span>
               departments. Never forget every one is a hero.
             </p>
           </div>
