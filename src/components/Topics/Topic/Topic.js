@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Card from './Card/Card';
 
 const Topic = ({ topic }) => {
@@ -14,6 +15,8 @@ const Topic = ({ topic }) => {
           <p>Total Qus: {total}</p>
         </div>
         <div className="flex justify-center">
+          <Link to='/'>
+          </Link>
           <button className="w-3/4 bg-[#e92b19] rounded-lg my-4 hover:bg-yellow-400 hover:border-x-4 hover:border-t-2 hover:border-[#e92b19] hover:shadow-lg">
             <p className=" py-2 font-bold">Start Quiz</p>
           </button>

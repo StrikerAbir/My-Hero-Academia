@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { axios } from "axios";
 import {
   LineChart,
   Line,
@@ -10,11 +11,13 @@ import {
 } from "recharts";
 
 const LineCharts = () => {
-    const [price, setPrice] = useState([]);
+  const [price, setPrice] = useState([]);
+  
+  
     useEffect(() => {
         fetch('department.json').then(res=>res.json()).then(data => setPrice(data))
     }, [])
-    console.log(price);
+
     return (
       <div className>
         <LineChart width={300} height={200} data={price}>
