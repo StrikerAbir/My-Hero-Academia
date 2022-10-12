@@ -41,7 +41,7 @@ const Question = ({ singleQuestion, index}) => {
     };
    
   return (
-    <div className="bg-yellow-400 p-5 mb-8 shadow-lg rounded-xl border-x-4 border-t-2 border-[#e92b19]">
+    <div className="bg-green-500 p-5 mb-8 shadow-lg rounded-xl border-x-4 border-t-2 border-[#e92b19]">
       <div className="font-semibold text-2xl mb-5 flex items-center justify-between">
         Qus-{index + 1} : {`${splits}`}
         <button className="ml-9" onClick={() => showAns(correctAnswer)}>

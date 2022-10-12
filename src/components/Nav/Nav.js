@@ -11,7 +11,7 @@ const Nav = () => {
     { id: 4, name: "Blog", path: "/blog" },
   ];
   return (
-    <div className="bg-yellow-400 text-black lg:flex items-center justify-around py-3 shadow-lg sticky top-0">
+    <div className="bg-green-500 text-black lg:flex items-center justify-around py-3 shadow-lg sticky top-0">
       <div className="flex items-center justify-between mx-8">
         <img className="lg:w-48 w-36" src={logo} alt="" />
         <div onClick={() => setOpen(!open)} className="h-8 w-8 lg:hidden ">
@@ -20,7 +20,7 @@ const Nav = () => {
       </div>
       <nav>
         <ul
-          className={`pt-5 lg:pt-0 lg:flex lg:static absolute left-0 right-0 mx-auto bg-yellow-400 shadow-xl lg:shadow-none ${
+          className={`pt-5 lg:pt-0 lg:flex lg:static absolute left-0 right-0 mx-auto bg-green-500 shadow-xl lg:shadow-none ${
             open ? "top-22" : "top-[-500px]"
           }`}
         >

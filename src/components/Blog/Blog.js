@@ -6,7 +6,7 @@ const Blog = () => {
     <div>
       <Gif></Gif>
       <div className=" flex flex-col items-center py-10">
-        <h1 className="text-2xl lg:text-4xl font-extrabold tracking-wider mb-10 px-20 py-5 border-x-4 border-t bg-yellow-400 shadow-lg border-[#e92b19] rounded-lg ">
+        <h1 className="text-2xl lg:text-4xl font-extrabold tracking-wider mb-10 px-20 py-5 border-x-4 border-t bg-green-500 shadow-lg border-[#e92b19] rounded-lg ">
           Blog
         </h1>
         <div className="text-center w-3/4">

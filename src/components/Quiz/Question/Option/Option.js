@@ -22,7 +22,7 @@ const Option = ({ option, id, correctAnswer }) => {
     return (
       <label
         htmlFor={option}
-        className=" shadow-lg rounded-xl border-x-4 border-black hover:border-[#e92b19] hover:border-t-2 flex py-5"
+        className=" shadow-lg rounded-xl border-x-4 border-black hover:border-[#e92b19] hover:border-t-2 flex hover:bg-green-400 py-5"
         // onClick={() => showToastMessage(correctAnswer, option)}
       >
         <input
