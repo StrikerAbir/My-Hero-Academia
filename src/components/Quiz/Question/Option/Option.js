@@ -8,29 +8,32 @@ const Option = ({ option, id, correctAnswer }) => {
     const showToastMessage = (correctAnswer, option) => {
         if (correctAnswer === option) {
             setCorrect(correct + 1);
-        return toast.success("Correct Answer!", {
+         toast.success("Correct Answer!", {
           position: toast.POSITION.TOP_CENTER,
         });
         } else {
             setWrong(wrong + 1);
-        return toast.error("Wrong Answer!", {
+         toast.error("Wrong Answer!", {
           position: toast.POSITION.TOP_CENTER,
         });
       }
+      console.log(correctAnswer);
     };
     return (
-      <div className=" shadow-lg rounded-xl border-x-4 border-black hover:border-[#e92b19] hover:border-t-2">
-        <label
-          for={option}
-          className="flex p-5"
+      <label
+        htmlFor={option}
+        className=" shadow-lg rounded-xl border-x-4 border-black hover:border-[#e92b19] hover:border-t-2 flex py-5"
+        // onClick={() => showToastMessage(correctAnswer, option)}
+      >
+        <input
+          type="radio"
+          id={option}
+          name={id}
+          className="ml-4"
           onClick={() => showToastMessage(correctAnswer, option)}
-        >
-          <input type="radio" id={option} name={id} />
-          <div className="w-full h-full">
-            <p className="ml-4">{option}</p>
-          </div>
-        </label>
-      </div>
+        />
+        <p className="ml-4">{option}</p>
+      </label>
     );
 };
 
